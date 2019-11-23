@@ -1,0 +1,27 @@
+{
+  "name": "kazanjs",
+  "version": "1.0.0",
+  "description": "KazanJS official website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open",
+    "build": "webpack --config build/webpack.build.conf.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie <= 8",
+    "last 15 versions"
+  ],
+  "keywords": [
+    "KazanJS",
+    "JS",
+    "JavaScript",
+    "Kazan"
+  ],
+  "author": "KazanJS",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "gsap": "^3.0.1",
+    "pubsub-js": "^1.7.0"
+  }
+}
