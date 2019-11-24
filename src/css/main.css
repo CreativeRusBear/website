@@ -142,16 +142,6 @@ a.is_active.odd{
     margin-right: 0;
 }
 
-a.vk{
-    background-image: url("../img/svg/vk.svg");
-}
-
-a.telegram{
-    background-image: url("../img/svg/telegram.svg");
-}
-a.github{
-    background-image: url("../img/svg/github.svg");
-}
 .section .links > a:hover{
     filter: brightness(75%) saturate(0%) contrast(120%) invert(100%);
 }
