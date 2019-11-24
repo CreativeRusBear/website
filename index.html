@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="src/img/logo/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KazanJS</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
+<nav class="pagination">
+    <ul>
+        <li><a data-gotoslide="0" href="#" class="is_active"></a></li>
+        <li><a data-gotoslide="1" href="#"></a></li>
+        <li><a data-gotoslide="2" href="#"></a></li>
+    </ul>
+</nav>
+<section class="section is_active" data-slide="0">
+    <div class="container">
+        <h2 class="data-stagger">KAZAN JS</h2>
+        <div class="list">
+            <p class="data-stagger">Мы рады видеть вас на официальном сайте русскоязычного сообщества разработчиков на JavasScript в Казани.</p>
+            <p class="data-stagger"> Мы регулярно проводим митапы на инетресующие темы, в которых каждый узнает для себя что-то новое.</p>
+            <p class="data-stagger">Также у нас есть чат в <a href="https://t.me/kazanjs" title="Telegram-чат" target="_blank">Telegram</a>, где вы можете задать вопрос, обсудить тему или же просто пообщаться с сообществом.</p>
+            <p class="data-stagger">В группе в <a href="https://vk.com/kznjs" title="Группа в ВКонтакте" target="_blank">ВК</a> выкладываются видеозаписи с прошедших митапов.</p>
+        </div>
+        <div class="links">
+            <a href="https://vk.com/kznjs" title="Группа в ВКонтакте" target="_blank" class="vk data-stagger"></a>
+            <a href="https://t.me/kazanjs" title="Telegram-чат" target="_blank" class="telegram data-stagger"></a>
+            <a href="https://github.com/kazanjs" title="Telegram-чат" target="_blank" class="github data-stagger"></a>
+        </div>
+    </div>
+</section>
+<section class="section" data-slide="1">
+    <div class="container">
+        <h2 class="data-stagger">Митапы</h2>
+        <div class="list">
+            <p class="data-stagger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate eaque error, in iusto nesciunt sequi sint voluptatibus? </p>
+            <p class="data-stagger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur corporis exercitationem modi, numquam qui quod veniam.</p>
+        </div>
+    </div>
+</section>
+<section class="section" data-slide="2">
+    <div class="container">
+        <h2 class="data-stagger">Title</h2>
+        <div class="list">
+            <p class="data-stagger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate eaque error, in iusto nesciunt sequi sint voluptatibus? </p>
+            <p class="data-stagger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur corporis exercitationem modi, numquam qui quod veniam.</p>
+        </div>
+    </div>
+</section>
+<script src="dist/js/index.js" type="module"></script>
 </body>
 </html>

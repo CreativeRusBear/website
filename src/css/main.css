@@ -1,2 +1,157 @@
 @import "fonts.css";
 @import "palette.css";
+
+:root{
+    --pag-btn-size: 0.8rem;
+}
+html{
+    font-size: 20px;
+}
+
+* {
+    font-family: var(--roboto-font);
+    margin: 0;
+    padding: 0
+}
+
+body {
+    line-height: 1.4;
+    color: var(--dark-grey-color);
+    overflow: hidden;
+    height: 100vh
+}
+
+
+.pagination {
+    position: fixed;
+    display: block;
+    z-index: 2;
+    top: 50vh;
+    left: 5vw;
+}
+
+.pagination li {
+    width: var(--pag-btn-size);
+    height: var(--pag-btn-size);
+    margin-bottom: var(--pag-btn-size);
+    list-style-type: none
+}
+
+a{
+    transition: background 0.6s, filter 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+.pagination a:hover{
+    background: var(--light-gray-color);
+}
+
+.pagination a {
+    display: block;
+    width: var(--pag-btn-size);
+    height: var(--pag-btn-size);
+    border-radius: 50%;
+    background: var(--white-color);
+}
+
+.pagination a.is_active {
+    background: var(--dark-grey-color);
+}
+
+a.is_active.odd{
+    background: var(--yellow-color);
+}
+
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 0;
+    width: 100%;
+}
+
+.section:nth-child(even){
+    background: var(--yellow-color);
+    color: var(--dark-grey-color);
+}
+
+.section:nth-child(odd){
+    background: var(--dark-grey-color);
+    color: var(--light-gray-color);
+}
+
+.section.is_active {
+    opacity: 1;
+    z-index: 1;
+}
+.section > .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    margin: 0 10vw;
+
+}
+.section h2 {
+    font-size: var(--title-fs);
+}
+
+
+.section .list p {
+    display: block;
+    font-size: var(--standard-fs);
+    margin: 1.5rem 0;
+    line-height: 1.6
+}
+
+.section .list a{
+    background: inherit;
+    transition: color 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+.section:nth-child(even) .list p a{
+    color: var(--light-gray-color);
+}
+
+.section:nth-child(even) .list p a:hover{
+    color: var(--dark-grey-color);
+}
+
+.section:nth-child(odd) .list p a{
+    color: var(--yellow-color);
+}
+
+.section:nth-child(odd) .list p a:hover{
+    color: var(--light-gray-color);
+}
+
+.section .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .links > a{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    margin-right: 1rem;
+}
+
+.section .links > a:last-child{
+    margin-right: 0;
+}
+
+a.vk{
+    background-image: url("../img/svg/vk.svg");
+}
+
+a.telegram{
+    background-image: url("../img/svg/telegram.svg");
+}
+a.github{
+    background-image: url("../img/svg/github.svg");
+}
+.section .links > a:hover{
+    filter: brightness(75%) saturate(0%) contrast(120%) invert(100%);
+}
