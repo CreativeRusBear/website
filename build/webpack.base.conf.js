@@ -4,6 +4,7 @@ const copyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const mozjpeg = require('imagemin-mozjpeg');
 const imageminSvgo = require('imagemin-svgo');
+require('babel-polyfill');
 
 const Paths ={
 	src  : path.join(__dirname, '../src'),
@@ -15,7 +16,7 @@ module.exports={
 		paths: Paths,
 	},
 	entry: {
-		app: `${Paths.src}/js/index.js`,
+		app: [ 'babel-polyfill', `${Paths.src}/js/index.js` ],
 	},
 	output: {
 		filename   : 'index.js',
@@ -62,6 +63,10 @@ module.exports={
 			{
 				from : `${Paths.src}/img`,
 				to   : `${Paths.dist}/img`,
+			},
+			{
+				from : `${Paths.src}/json`,
+				to   : `${Paths.dist}/json`,
 			},
 		]),
 		new ImageminPlugin({

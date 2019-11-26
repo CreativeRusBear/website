@@ -1,6 +1,11 @@
 import PubSub from 'pubsub-js';
 import {TimelineMax} from 'gsap';
 
+
+/**
+ *
+ */
+
 PubSub.subscribe('goToSlide', (msg, data) => {
 	const sections = document.querySelectorAll('section');
 	const currentSlide = sections[data.from];

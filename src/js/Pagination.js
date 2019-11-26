@@ -1,11 +1,21 @@
 import PubSub from 'pubsub-js';
 
+
+/**
+ *
+ */
+
 export default class Pagination {
 	constructor () {
 		this.activeSlide = 0;
 		this.max = document.querySelectorAll('section').length-1;
 		this.canGo = true;
 	}
+
+
+	/**
+	 *
+	 */
 
 	setClassForOddPaginationItems () {
 		const items = document.querySelectorAll('.pagination a');
@@ -15,6 +25,11 @@ export default class Pagination {
 			}
 		});
 	}
+
+
+	/**
+	 *
+	 */
 
 	scrollEvents () {
 		window.onwheel= e => {
@@ -28,6 +43,11 @@ export default class Pagination {
 			this.activeSlide = newSlide;
 		};
 	}
+
+
+	/**
+	 *
+	 */
 
 	clickEvents () {
 		const that = this;
